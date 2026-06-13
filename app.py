@@ -21,7 +21,7 @@ model, scaler = load_model()
 # =========================================
 # EKSTRAKSI FITUR
 # =========================================
-
+from mahotas.features import haralick
 def extract_features_from_image(img):
 
     # Resize
@@ -56,7 +56,8 @@ def extract_features_from_image(img):
     # HARALICK FEATURES
     # =====================================
 
-    textures = mt.features.haralick(blur)
+    textures = haralick(blur)
+    #textures = mt.features.haralick(blur)
 
     ht_mean = textures.mean(axis=0)
 
