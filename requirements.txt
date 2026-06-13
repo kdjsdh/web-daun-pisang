@@ -1,7 +1,7 @@
-streamlit==1.25.0
-opencv-python==4.8.0.76
+streamlit
 numpy
 pandas
-StandardScaler
-svm
-pyplot
+opencv-python-headless
+scikit-learn
+joblib
+mahotas
