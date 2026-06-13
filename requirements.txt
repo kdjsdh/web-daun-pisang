@@ -4,4 +4,4 @@ pandas
 opencv-python-headless
 scikit-learn
 joblib
-mahotas
+mahotas==1.4.18
