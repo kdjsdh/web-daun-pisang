@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 import numpy as np
 import pandas as pd
-#import mahotas as mt
+import mahotas as mt
 from mahotas.features import haralick
 import joblib
 from sklearn.preprocessing import StandardScaler, scale
