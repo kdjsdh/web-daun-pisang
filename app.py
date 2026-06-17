@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import pandas as pd
 import mahotas as mt
-from mt.features import haralick
 import joblib
 from sklearn.preprocessing import StandardScaler, scale
 from sklearn import svm
@@ -56,11 +55,8 @@ def extract_features_from_image(img):
     # =====================================
     # HARALICK FEATURES
     # =====================================
-
-    textures = haralick(blur)
-
+    textures = mt.features.haralick(blur)
     ht_mean = textures.mean(axis=0)
-
     contrast = ht_mean[1]
     correlation = ht_mean[2]
     inverse_diff_moments = ht_mean[4]
